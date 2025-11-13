@@ -68,7 +68,7 @@ nav ul li:hover> ul {
       
       <!--Elemento con subtema-->
       <li>
-         <img src="logo.png" width="80" height="110" align="center">
+         <img src="logotipo-cecytem.png" width="80" height="110" align="center">
 
         </li>
           <li>
@@ -149,4 +149,5 @@ nav ul li:hover> ul {
 
 
        
+
 
