@@ -1,150 +1,146 @@
-<!DOCTYPE HTML><!--doc en html-->
-<HTML LANG="ES"><!--doc en español-->
-<HEAD>
-<meta charset="UFT-8"><!--codifica caracteres-->
-<meta neme="viewport" content="width=device-width, initial-scale=1.0">
-<script src="jr.js"></script>
-<!--ajusta el diseño a moviles-->
-<title> GUIA DIGITALN CIUDADANA</title><!--titulo que aparece en la pestaña-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Digital Ciudadana</title>
+
 <style>
-
- <body {
-    margin: 0; /*elimina margenes por defecto */
-    font-family:Arial, sans-serif;/*fuente de texto */
-    }
-/*estilo del menu principal */
-nav{
-   background: #0000FF;/*fondo gris oscuro */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("fondo3.jpg");
+    background-size: cover;
 }
+
+/* Menú */
+nav {
+    background: #0000FF;
+}
+
 nav ul {
-   list-style: none;/*quita viñetas de la lista */
-   margin: 0;/*elimina margenes */
-   padding: 0; /*elimina relleno */
-   display: flex;/*coloca los <li> en linea (horizontal) */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 nav ul li {
-   position: relative;/*necesario para posicionar el submenu debajo */
+    position: relative;
 }
+
 nav ul li a {
-   display: block;/*ase que todo el area sea clickeable */
-   padding: 15px 20px; /*espacio interno */
-   color: white;/*texto blanco */
-   text-decoration: none;/*quita el subrayado */
-}
-nav ul li a:hover{
-   background: #FFC0CB;/* cambia el fondo al pasar el raton */
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
 }
 
-/* Estilo del submenu */
-nav ul li ul{
-   display: none; /*oculta el submenu por defecto */
-   position: absolute; /*posiciona el submenu relativo al padre */ 
-   top: 100%; /* lo coloca justo debajo del elemento padre */
-   left: 0; /* aliniado a la izquirda */
-   background: #444; /*fondo del subtema */
-   padding: 0; /*sin espacio interno */
-   min-width: 180px; /* ancho minimo del subtema */
+nav ul li a:hover {
+    background: #FFC0CB;
 }
+
+/* Submenu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    min-width: 180px;
+}
+
 nav ul li ul li a {
-   padding: 10px 15px; /*espacio interno en las opciones */
-}
-nav ul li ul li a:hover {
-   background: #FFC0CB; /*coloca mas claro al pasar el raton */
+    padding: 10px 15px;
 }
 
-/* mostar el submenu */
-nav ul li:hover> ul {
-   display: block; /*cuando paso el raton sobre el <li> , muestra el submenu */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* 🔹 Estilo responsive */
+@media (max-width: 650px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li ul {
+        position: static;
+    }
 }
 </style>
+
 </head>
+
 <body>
-    <body background="fondo3.jpg">
-   <!--menu principal-->
-   <nav>
-      <ul>
-       <!--elemento simple sin subtema-->
-       
-      
-      <!--Elemento con subtema-->
-      <li>
-         <img src="cecytem-logo.png" width="80" height="110" align="center">
 
-        </li>
-          <li>
-       <p> <form action="https://www.google.com/search" method="get">
-  <input type="text" name="q" placeholder="Buscar en Google">
-  <input type="submit" value="Buscar"></p>
-  </form>
-    </li>
-       <li>
-         <li> <p><a href="guia2.html">GUIA CIUDADANA</a></p></li>  <!--Flecha indicando subtema-->
-        
-       </li>
-      <li>
-         <li> <p><a href="ciudadano2.html">CIUDADANO</a></p></li>  <!--Flecha indicando subtema-->
-        
-       </li>
-       <li>
-         <li> <p><a href="info.html">INFORMACION</a></p></li>  <!--Flecha indicando subtema-->
-        
-       </li>
-       <li>
-          <p><a href="info2.html">SERVICIOS</a></p>  <!--Flecha indicando subtema-->
-        <ul>
-        <li><a href="presentables2.html">PRESENTABLES</a></li>
-        
-      </ul>
-       </li>
- 
+<nav>
+    <ul>
+        <li><img src="cecytem-logo.png" width="60"></li>
 
-       <li>
-         <p><a href="">TRAMITE</a></p>  <!--Flecha indicando subtema-->
-        <ul>
-        <li><a href="tramites.html">ADMINISTRATIVOS</a></li>
-        <li><a href="gestion.html">GESTIONAR TRAMITES</a></li>
-      </ul>
-
-       
-
-       <li>
-        <p><a href="">PAGO</a></p>  <!--Flecha indicando subtema-->
-        <ul>
-        <p><a href="http://201.144.206.190/">PAGO PREDIAL</a></p>
-           <p><a href="http://odapasvalledebravo.dyndns.org/Default.aspx">PAGO DE AGUA</a></p>
-           <p><a href="https://app.cfe.mx/Aplicaciones/CCFE/MiEspacio/login.aspx">RECIBO DE LUZ(CFE)</a></p>
-           <p><a href="https://telmex.com/pago_sin_login?srsltid=AfmBOoo-GQhR2R91r4E56NmuKjTWYkyYdxQ2rt-PTInzfIgirvfqAD8Q">PAGO TELEFONO</a></p>
-           <p><a href="https://sseguridad.edomex.gob.mx/infracciones-transito">PAGO MULTAS DE TRANCITO</a></p>
-           <p><a href="https://tenencia.edomex.gob.mx/TenenciaIndividual/tenencia/A06E1A88B8A6ED4B#/">TENENCIA</a></p>
-           <p><a href="https://www.gob.mx/sre/acciones-y-programas/opciones-para-realizar-el-pago-de-pasaporte">PAGO PASAPORTE</a></p>
-           <p><a href="https://smovilidad.edomex.gob.mx/licencias_permisos">PAGO DE LICENCIA</a></p>
-         
-           
-      </ul>
-        </li>
-
-       </li>
-       <li>
-     <p><a href="JR_DOCUMENTO.HTML">DOCUMENTO </a></p>
-      <ul>
-        <li><a href="galeria2.html">GALERIA</a></li>
-        
-      </ul>
-    </li>
-    <li>
-       <p><a href="">VISITANTES</a></p>  <!--Flecha indicando subtema-->
-        <ul>
-        <li><a href="index_gc.html">REGISTRO</a></li>
-        
-      </ul>
-        </li>
         <li>
-         <p><a href="https://www.valledebravo.gob.mx/tramites_en_linea.html">PORTAL AYUNTAMIENTO VALLE DE BRAVO </a></p> 
-      </li>
-        
-     </nav> 
-     <center> 
-     
-      
-   </body>
-   </html>
+            <form action="https://www.google.com/search" method="get">
+                <input type="text" name="q" placeholder="Buscar en Google">
+                <input type="submit" value="Buscar">
+            </form>
+        </li>
+
+        <li><a href="guia2.html">GUÍA CIUDADANA</a></li>
+
+        <li><a href="ciudadano2.html">CIUDADANO</a></li>
+
+        <li><a href="info.html">INFORMACIÓN</a></li>
+
+        <li>
+            <a href="#">SERVICIOS</a>
+            <ul>
+                <li><a href="presentables2.html">PRESENTABLES</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">TRÁMITE</a>
+            <ul>
+                <li><a href="tramites.html">ADMINISTRATIVOS</a></li>
+                <li><a href="gestion.html">GESTIONAR TRÁMITES</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">PAGO</a>
+            <ul>
+                <li><a href="http://201.144.206.190/">PAGO PREDIAL</a></li>
+                <li><a href="http://odapasvalledebravo.dyndns.org/Default.aspx">PAGO DE AGUA</a></li>
+                <li><a href="https://app.cfe.mx/Aplicaciones/CCFE/MiEspacio/login.aspx">RECIBO DE LUZ</a></li>
+                <li><a href="https://telmex.com/pago_sin_login">TELÉFONO</a></li>
+                <li><a href="https://sseguridad.edomex.gob.mx/infracciones-transito">MULTAS</a></li>
+                <li><a href="https://tenencia.edomex.gob.mx/">TENENCIA</a></li>
+                <li><a href="https://www.gob.mx/sre/">PASAPORTE</a></li>
+                <li><a href="https://smovilidad.edomex.gob.mx/licencias_permisos">LICENCIA</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="JR_DOCUMENTO.HTML">DOCUMENTO</a>
+            <ul>
+                <li><a href="galeria2.html">GALERÍA</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">VISITANTES</a>
+            <ul>
+                <li><a href="index_gc.html">REGISTRO</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="https://www.valledebravo.gob.mx/tramites_en_linea.html">
+                AYUNTAMIENTO
+            </a>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>
