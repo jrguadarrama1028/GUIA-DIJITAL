@@ -1,204 +1,176 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
-body {
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight:300;
-  letter-spacing: 2px;
-  font-size:48px;
+body{
+  font-family:'Lato',sans-serif;
 }
 
-p {
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 1px;
-  font-size:14px;
-  color: #333333;
-}
-
+/* ------------------------------
+      ENCABEZADO RESPONSIVE
+------------------------------- */
 .inner-header{
   background-image:url(https://static.vecteezy.com/system/resources/previews/001/741/324/non_2x/blurred-shiny-blue-background-free-photo.jpg);
+  background-size:cover;
+  background-position:center;
+  height:55vh; /* reducido para móvil */
+  width:100%;
 }
 
-.header {
+.header{
   position:relative;
   text-align:center;
   color:white;
 }
 
-.logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
+h1{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight:300;
+  letter-spacing:2px;
+  font-size:40px;
 }
 
-h1 img{
-  width: 15px;
+@media (max-width:600px){
+  h1{
+    font-size:26px;
+  }
 }
 
-.inner-header {
-  height:65vh;
+/* ------------------------------
+       CARRUSEL 3D RESPONSIVE
+------------------------------- */
+.gallery2{
   width:100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.agua {
-  position:relative;
-  width: 100%;
-  height:17vh;
-  margin-bottom:-7px; 
-  min-height:100px;
-  max-height:150px;
-  background: linear-gradient(60deg, rgb(36, 19, 104) 0%, rgba(0,172,193,1) 100%);
-}
-
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
-}
-
-.gal{
-  background-color: black;
-}
-
-/* WAVE Animation */
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-}
-
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-
-@keyframes move-forever {
-  0% { transform: translate3d(-90px,0,0); }
-  100% { transform: translate3d(85px,0,0); }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}
-
-.separador{
-  width: 100%;
-  height: 18px;
-}
-
-.gallery2 {
-  display: flex;
-  width: 1200px;
-  height: 90vh;
-  overflow: hidden;
-  margin: 0 auto;
-  justify-content: center; 
+  max-width:900px;
+  height:70vh;
   border-radius:15px;
-  background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
+  margin:auto;
+  background-image:url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 h2{
-  text-align: center;
-  font-size: 50px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-top: 80px;
-  color: aqua;
-  text-shadow: 0px 0px 6px black;
+  text-align:center;
+  font-size:40px;
+  color:aqua;
+  text-shadow:0px 0px 6px black;
+  margin-top:40px;
 }
 
+/* Centro del carrusel */
 .content-all{
-  width: 210px;
-  margin: auto;
-  perspective: 800px;
-  position: relative;
-  margin-top: 50px;
+  width:200px;
+  height:200px;
+  perspective:800px;
+  margin:auto;
 }
 
+/* Carrusel */
 .content-carrousel{
-  width: 50%;
-  position: absolute;
-  animation: rotar 10s infinite linear;
-  transform-style: preserve-3d;
+  width:100%;
+  height:100%;
+  position:absolute;
+  animation:rotar 12s infinite linear;
+  transform-style:preserve-3d;
 }
 
 .content-carrousel:hover{
-  animation-play-state: paused;
-  cursor: pointer;
+  animation-play-state:paused;
 }
 
+/* Imágenes */
 .content-carrousel figure{
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  position: absolute;
-  box-shadow: 0px 0px 20px 0px black;
-  transition: all 300ms;
+  width:100%;
+  height:120px;
+  overflow:hidden;
+  position:absolute;
+  border-radius:12px;
+  box-shadow:0px 0px 18px rgba(0,0,0,0.7);
+  transition:300ms;
 }
-
-.content-carrousel figure:hover{
-  box-shadow: 0px 0px 0px 0px black;
-}
-
-.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
-.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
-.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
-.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
-.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
-.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
-.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
-.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
-.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
-.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
 
 .content-carrousel img{
-  width: 100%;
-  transition: all 300ms;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .content-carrousel img:hover{
-  transform: scale(1.2);
+  transform:scale(1.2);
 }
 
+/* Posiciones de 10 imágenes */
+.content-carrousel figure:nth-child(1){transform:rotateY(0deg) translateZ(250px);}
+.content-carrousel figure:nth-child(2){transform:rotateY(36deg) translateZ(250px);}
+.content-carrousel figure:nth-child(3){transform:rotateY(72deg) translateZ(250px);}
+.content-carrousel figure:nth-child(4){transform:rotateY(108deg) translateZ(250px);}
+.content-carrousel figure:nth-child(5){transform:rotateY(144deg) translateZ(250px);}
+.content-carrousel figure:nth-child(6){transform:rotateY(180deg) translateZ(250px);}
+.content-carrousel figure:nth-child(7){transform:rotateY(216deg) translateZ(250px);}
+.content-carrousel figure:nth-child(8){transform:rotateY(252deg) translateZ(250px);}
+.content-carrousel figure:nth-child(9){transform:rotateY(288deg) translateZ(250px);}
+.content-carrousel figure:nth-child(10){transform:rotateY(324deg) translateZ(250px);}
+
+/* Animación */
 @keyframes rotar{
-  from{ transform: rotateY(0deg); }
-  to{ transform: rotateY(360deg); }
+  from{ transform:rotateY(0deg); }
+  to{ transform:rotateY(360deg); }
 }
+
+/* ------------------------------
+         MODO MÓVIL
+------------------------------- */
+@media (max-width:600px){
+
+  .gallery2{
+    height:60vh;
+    max-width:95%;
+  }
+
+  .content-all{
+    width:150px;
+    height:150px;
+  }
+
+  .content-carrousel figure{
+    height:90px;
+  }
+
+  h2{
+    font-size:28px;
+  }
+}
+
+/* ------------------------------
+        TABLET
+------------------------------- */
+@media (min-width:601px) and (max-width:900px){
+
+  .gallery2{
+    height:65vh;
+  }
+
+  .content-all{
+    width:180px;
+    height:180px;
+  }
+
+  .content-carrousel figure{
+    height:110px;
+  }
+
+  h2{
+    font-size:32px;
+  }
+}
+
 
