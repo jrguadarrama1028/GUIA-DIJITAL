@@ -1,87 +1,203 @@
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* TITULOS */
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
 }
 
-.galeria{
-    width: 80%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 128px);
-    grid-auto-rows:200px;
-    justify-content:center;
-    gap: 1rem;
-    min-height: 1000px;
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
 }
 
-.galeria_item{
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    grid-column: span 2;
-    height: 283px;
-    transition: 0.5s filter;
+/* HEADER */
+.inner-header{
+  background-image:url(https://static.vecteezy.com/system/resources/previews/001/741/324/non_2x/blurred-shiny-blue-background-free-photo.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.galeria_item:hover{
-    filter: brightness(0.3);
+.header {
+  position:relative;
+  text-align:center;
+  color:white;
 }
 
-.galeria_item:first-of-type{
-    grid-column: 2 / span 2;
+/* LOGO SMALL */
+h1 img{
+  width: 15px;
 }
 
-/* MEDIDAS RESPONSIVE (Corrigiendo tus errores de escritura) */
-@media screen and (min-width: 270px) and (max-width: 504px){
-    .galeria_item:first-of-type{
-        grid-column: 1 / span 2;
-    }
-    .galeria{
-        grid-auto-rows: 283px;
-    }    
+.inner-header {
+  height:50vh;
+  width:100%;
 }
 
-@media screen and (min-width: 505px) and (max-width:685px){
-    .galeria_item:nth-of-type(odd){
-        grid-column: 2 / span 2;
-    }
+/* FLEX CONFIG */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-@media screen and (min-width: 686px) and (max-width:862px){
-    .galeria_item:nth-of-type(3n + 1){
-        grid-column: 2 / span 2;
-    }
+/* WAVE COLORS */
+.agua {
+  position:relative;
+  width: 100%;
+  height:120px;
+  background: linear-gradient(60deg, rgb(36, 19, 104) 0%, rgba(0,172,193,1) 100%);
 }
 
-@media screen and (min-width: 863px) and (max-width:1038px){
-    .galeria_item:nth-of-type(4n + 1){
-        grid-column: 2 / span 2;
-    }
+/* CONTENIDO BLANCO */
+.content {
+  position:relative;
+  height:auto;
+  padding: 20px;
+  text-align:center;
 }
 
-@media screen and (min-width: 1039px) and (max-width:1215px){
-    .galeria_item:nth-of-type(5n + 1){
-        grid-column: 2 / span 2;
-    }
+/* SEPARADOR */
+.separador{
+  width: 100%;
+  height: 18px;
 }
 
-@media screen and (min-width: 1216px) and (max-width:1390px){
-    .galeria_item:nth-of-type(6n + 1){
-        grid-column: 2 / span 2;
-    }
+/*****************************************************
+    GALERÍA – CARRUSEL 3D TOTALMENTE RESPONSIVO
+*****************************************************/
+
+.gallery2 {
+  width: 100%;
+  max-width: 900px;
+  height: 70vh;
+  max-height: 550px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius:15px;
+  background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (min-width: 1391px){
-    .galeria_item:nth-of-type(7n + 1){
-        grid-column: 2 / span 2;
-    }
+h2{
+  text-align: center;
+  font-size: 38px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: aqua;
+  text-shadow: 0px 0px 6px black;
+  margin-bottom: 20px;
 }
+
+/* CONTENEDOR CON PROFUNDIDAD */
+.content-all{
+  width: 180px;
+  perspective: 900px;
+  position: relative;
+}
+
+/* CARRUSEL */
+.content-carrousel{
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  animation: rotar 12s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/* IMÁGENES */
+.content-carrousel figure{
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0 0 20px black;
+  border-radius: 10px;
+}
+
+.content-carrousel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.content-carrousel img:hover{
+  transform: scale(1.15);
+}
+
+/* POSICIÓN 3D */
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(260px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(36deg) translateZ(260px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(72deg) translateZ(260px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(108deg) translateZ(260px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(144deg) translateZ(260px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(180deg) translateZ(260px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(216deg) translateZ(260px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(252deg) translateZ(260px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(288deg) translateZ(260px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(324deg) translateZ(260px);}
+
+@keyframes rotar{
+  from{ transform: rotateY(0deg); }
+  to{ transform: rotateY(360deg); }
+}
+
+/*****************************************************
+   RESPONSIVE – AJUSTES PARA CELULAR
+*****************************************************/
+
+@media (max-width: 600px){
+
+  h2{
+    font-size: 28px;
+  }
+
+  .gallery2{
+    height: 60vh;
+  }
+
+  .content-all{
+    width: 140px;
+  }
+
+  .content-carrousel{
+    height: 150px;
+  }
+
+  .content-carrousel figure{
+    height: 150px;
+  }
+
+  .content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(2){transform: rotateY(36deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(3){transform: rotateY(72deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(4){transform: rotateY(108deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(5){transform: rotateY(144deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(6){transform: rotateY(180deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(7){transform: rotateY(216deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(8){transform: rotateY(252deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(9){transform: rotateY(288deg) translateZ(200px);}
+  .content-carrousel figure:nth-child(10){transform: rotateY(324deg) translateZ(200px);}
+}
+
+
 
 
