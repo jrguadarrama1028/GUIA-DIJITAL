@@ -2,7 +2,7 @@
 <HTML LANG="ES"><!--doc en español-->
 <HEAD>
 <meta charset="UFT-8"><!--codifica caracteres-->
-<meta neme="viewport" content="width=device-width, initial-scale=1.0"><!--ajusta el diseño a moviles-->
+<meta neme="viewport" content="width=device-width, initial-scale=2.0"><!--ajusta el diseño a moviles-->
 <title> GUIA DIGITALN CIUDADANA</title><!--titulo que aparece en la pestaña-->
 <style>
 
@@ -125,3 +125,4 @@ nav ul li:hover> ul {
   
    </body>
    </html>
+
