@@ -31,7 +31,7 @@ img{
     
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     grid-column: span 2;
-    height: 283px;
+    height: 263px;
     transition: 0.5s filter;
 
 }
@@ -331,3 +331,4 @@ h2{
   }
 
 }
+
