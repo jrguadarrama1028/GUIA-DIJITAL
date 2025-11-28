@@ -1,0 +1,87 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+/* TITULOS */
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+/* HEADER */
+.inner-header{
+  background-image:url(https://static.vecteezy.com/system/resources/previews/001/741/324/non_2x/blurred-shiny-blue-background-free-photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  color:white;
+}
+
+/* LOGO SMALL */
+h1 img{
+  width: 15px;
+}
+
+.inner-header {
+  height:50vh;
+  width:100%;
+}
+
+/* FLEX CONFIG */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* WAVE COLORS */
+.agua {
+  position:relative;
+  width: 100%;
+  height:120px;
+  background: linear-gradient(60deg, rgb(36, 19, 104) 0%, rgba(0,172,193,1) 100%);
+}
+
+/* CONTENIDO BLANCO */
+.content {
+  position:relative;
+  height:auto;
+  padding: 20px;
+  text-align:center;
+}
+
+/* SEPARADOR */
+.separador{
+  width: 100%;
+  height: 18px;
+}
+
+/*****************************************************
+    GALERÍA – CARRUSEL 3D TOTALMENTE RESPONSIVO
+*****************************************************/
+
+.gallery2 {
+  width: 100%;
+  max-width: 900px;
+  height: 70vh;
+  max-height: 550px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius:15px;
+  backgrou
