@@ -4,7 +4,6 @@ body {
   margin:0;
 }
 
-/* TITULOS */
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight:300;
@@ -19,11 +18,8 @@ p {
   color: #333333;
 }
 
-/* HEADER */
 .inner-header{
   background-image:url(https://static.vecteezy.com/system/resources/previews/001/741/324/non_2x/blurred-shiny-blue-background-free-photo.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .header {
@@ -32,17 +28,25 @@ p {
   color:white;
 }
 
-/* LOGO SMALL */
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
 h1 img{
   width: 15px;
 }
 
 .inner-header {
-  height:50vh;
+  height:65vh;
   width:100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* FLEX CONFIG */
 .flex {
   display: flex;
   justify-content: center;
@@ -50,38 +54,151 @@ h1 img{
   text-align: center;
 }
 
-/* WAVE COLORS */
 .agua {
   position:relative;
   width: 100%;
-  height:120px;
+  height:17vh;
+  margin-bottom:-7px; 
+  min-height:100px;
+  max-height:150px;
   background: linear-gradient(60deg, rgb(36, 19, 104) 0%, rgba(0,172,193,1) 100%);
 }
 
-/* CONTENIDO BLANCO */
 .content {
   position:relative;
-  height:auto;
-  padding: 20px;
+  height:20vh;
   text-align:center;
+  background-color: white;
 }
 
-/* SEPARADOR */
+.gal{
+  background-color: black;
+}
+
+/* WAVE Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
 .separador{
   width: 100%;
   height: 18px;
 }
 
-/*****************************************************
-    GALERÍA – CARRUSEL 3D TOTALMENTE RESPONSIVO
-*****************************************************/
-
 .gallery2 {
-  width: 100%;
-  max-width: 900px;
-  height: 70vh;
-  max-height: 550px;
-  margin: 0 auto;
+  display: flex;
+  width: 1200px;
+  height: 90vh;
   overflow: hidden;
+  margin: 0 auto;
+  justify-content: center; 
   border-radius:15px;
-  backgrou
+  background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
+}
+
+h2{
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 80px;
+  color: aqua;
+  text-shadow: 0px 0px 6px black;
+}
+
+.content-all{
+  width: 210px;
+  margin: auto;
+  perspective: 800px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.content-carrousel{
+  width: 50%;
+  position: absolute;
+  animation: rotar 10s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.content-carrousel figure{
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px black;
+  transition: all 300ms;
+}
+
+.content-carrousel figure:hover{
+  box-shadow: 0px 0px 0px 0px black;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+  width: 100%;
+  transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+  transform: scale(1.2);
+}
+
+@keyframes rotar{
+  from{ transform: rotateY(0deg); }
+  to{ transform: rotateY(360deg); }
+}
+
