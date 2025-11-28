@@ -4,32 +4,29 @@
     box-sizing: border-box;
 }
 
-/* TODAS LAS IMÁGENES AJUSTAN BIEN */
 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* ===== GALERÍA RESPONSIVA REAL ===== */
 .galeria{
     width: 100%;
-    max-width: 900px;
-    margin: auto;
-    padding: 10px;
-
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;    
     display: grid;
-
-    /* columnas flexibles que se adaptan de móvil a PC */
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 128px);
+    grid-auto-rows:200px;
+    justify-content:center;
+    gap: 0.7rem;
+    padding: 10px;
 }
 
-/* HEXÁGONOS */
 .galeria_item{
-    aspect-ratio: 1 / 1.15;   /* mantiene proporción del hexágono */
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    grid-column: span 2;
+    height: 260px;
     transition: 0.5s filter;
 }
 
@@ -37,33 +34,45 @@ img{
     filter: brightness(0.3);
 }
 
-/* POSICIÓN ESPECIAL DEL PRIMER ÍTEM */
 .galeria_item:first-of-type{
-    grid-column: span 2;
+    grid-column: 2 / span 2;
 }
 
-/* ========== RESPONSIVE REAL =========== */
-
-/* MÓVIL PEQUEÑO (ancho menor a 420px) */
-@media (max-width: 420px){
+/* 📱 MÓVILES (Pantallas pequeñas) */
+@media screen and (max-width: 480px){
     .galeria{
-        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+        grid-template-columns: repeat(auto-fit, 90px); /* MÁS ESTRECHO */
+        grid-auto-rows: 160px;
+        gap: 0.5rem;
     }
+
+    .galeria_item{
+        height: 160px;
+        grid-column: span 2;
+    }
+
     .galeria_item:first-of-type{
-        grid-column: span 1; /* evita que se deforme */
+        grid-column: 1 / span 2;
     }
 }
 
-/* TABLET pequeña */
-@media (min-width: 421px) and (max-width: 768px){
+/* 📱 Tablets pequeñas */
+@media screen and (min-width: 481px) and (max-width: 685px){
     .galeria{
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        grid-template-columns: repeat(auto-fit, 110px);
+        grid-auto-rows: 190px;
+    }
+
+    .galeria_item{
+        height: 190px;
+    }
+
+    .galeria_item:nth-of-type(odd){
+       grid-column: 2 / span 2;
     }
 }
 
-/* PANTALLAS GRANDES */
-@media (min-width: 769px){
-    .galeria{
-        max-width: 1200px;
-    }
-}
+/* 🖥️ Resoluciones mayores (igual que tu código original) */
+@media screen and (min-width: 686px) and (max-width:862px){
+    .galeria
+
